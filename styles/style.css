@@ -71,6 +71,7 @@
 }
 
 .header__square-pic {
+  /* ограничение для div-контейнера */
   height: 568px;
   width: 568px;
   background-color: #2f80ed;
@@ -127,7 +128,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0;
+  padding: 0 0 100px 0;
 }
 
 .section-titile {
@@ -154,6 +155,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  /* Ограничения таблицы */
   width: 1100px;
   display: flex;
   justify-content: space-between;
@@ -162,6 +164,7 @@
 }
 
 .table__cell {
+  /* Здесь оставляем width, так как это элемент таблицы и min/max-width с ними не используется, верно? */
   width: 250px;
   margin-top: 60px;
 }
@@ -171,7 +174,6 @@
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
-
 }
 
 .table__text {
@@ -182,7 +184,7 @@
 }
 
 .feynman {
-  height: 890px;
+  min-height: 890px;
   background: url('../images/feynman.png') left bottom/867px 637px no-repeat;
   background-color: #f2f2f2;
   padding-top: 100px;
@@ -190,13 +192,15 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  box-sizing: border-box;
 }
 
 .feynman__title {
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
-  width: 648px;
+  /* Здесь max-width, чтобы на большом экране заголовок не растянулся и оставлся в две строки. Моя логика верна?) */
+  max-width: 648px;
   text-align: center;
   padding-bottom: 70px;
   margin: 0;
@@ -232,6 +236,7 @@
 }
 
 .kaufman__triangle {
+  /* ограничение для div-контейнера */
   height: 877px;
   width: 877px;
   background-image: url('../images/kaufman-triangle.svg');
@@ -252,10 +257,8 @@
   z-index: 2;
 }
 
-.table_theme_dark {}
-
-/* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
+  /* Здесь оставляем width, так как это элемент таблицы и min/max-width с ними не используется? */
   width: 200px;
   margin-top: 80px;
   color: white;
@@ -285,8 +288,6 @@
   justify-content: space-between;
   flex-basis: 711px;
 }
-
-.logo__place_footer {}
 
 .footer__author {
   color: white;
