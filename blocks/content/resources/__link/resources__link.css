@@ -1,0 +1,9 @@
+.resources__link {
+   /* не задавала width, т.к. пространство между логотипами тоже становится ссылками */
+   height: 38px;
+   text-align: center;
+}
+
+.resources__link:hover {
+   opacity: 30%;
+   }
