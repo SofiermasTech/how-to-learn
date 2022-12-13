@@ -2,6 +2,7 @@
    /* не задавала width, т.к. пространство между логотипами тоже становится ссылками */
    height: 38px;
    text-align: center;
+   transition: opacity 1s;
 }
 
 .resources__link:hover {

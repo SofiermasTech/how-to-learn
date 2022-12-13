@@ -2,9 +2,9 @@
    text-decoration: none;
    outline: none;
    color: white;
+   transition: opacity 1s;
 }
 
 .footer__column-link:hover {
    opacity: 30%;
-   transition: color 1s;
 }
